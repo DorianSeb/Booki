@@ -38,56 +38,67 @@ header {
 }
 
 header img {
-    height: 1.2rem; /* De la police de base de 16 x1,2=19,2 -> Responsive */
+    height: 1.2rem;
+    /* De la police de base de 16 x1,2=19,2 -> Responsive */
     align-self: flex-start;
-    padding: 30px 0; /* Pour respecter la hauteur de 79 = 30 + 30 + 19 */
-  
+    padding: 30px 0;
+    /* Pour respecter la hauteur de 79 = 30 + 30 + 19 */
+
 }
 
 nav ul {
-    display: flex; /* Affiche les éléments de la liste en ligne */
-    justify-content: flex-end; /* Aligne les éléments à droite */
-    gap: 68px; /* Ajoute un espace entre chaque élément */
-    list-style: none; /* Enlève les puces des listes */
+    display: flex;
+    /* Affiche les éléments de la liste en ligne */
+    justify-content: flex-end;
+    /* Aligne les éléments à droite */
+    gap: 68px;
+    /* Ajoute un espace entre chaque élément */
+    list-style: none;
+    /* Enlève les puces des listes */
 }
 
 nav a:hover {
     color: #0065fc;
     border-top: solid #0065fc 2px;
     /* Mettre la barre au-dessus au passage de la souris */
-    padding-top: 22px; /* comment savoir que c'est 29 px ? je l'ai fais en testant plein de valeur */ 
+    padding-top: 22px;
+    /* comment savoir que c'est 29 px ? je l'ai fais en testant plein de valeur */
 }
 
 /********************* FORMULAIRE/RECHERCHE *********************/
 
 form {
-   width: 377px;
-   height: 50px;
-   display: flex;
-   align-items: center;
-   gap: 24px;
-   border-top: 5px black; 
-} 
+    width: 377px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-top: 5px black;
+}
+
 /***** Background logo *****/
 label {
     background-color: #F2F2F2;
-    min-width: 50px; /* Obligé de mettre une valeur min, sinon c'est tout petit. Mais je crains pour le côté responsive */
+    min-width: 50px;
+    /* Obligé de mettre une valeur min, sinon c'est tout petit. Mais je crains pour le côté responsive */
     height: 100%;
     border: 1px solid #ffffff;
     border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
+
 /***** couleur logo *****/
 .form i {
     color: black;
 }
 
 .destination-text {
-    color: black !important; /* Change la couleur du texte tapé en noir */
-    font-size: 16px; 
+    color: black !important;
+    /* Change la couleur du texte tapé en noir */
+    font-size: 16px;
 }
 
 /******************** FILTRES ********************/
@@ -96,7 +107,8 @@ label {
 
 .filters-section {
     font-family: 'Arial', sans-serif;
-    margin-top: 30px; /* Espace au-dessus des filtres */
+    margin-top: 30px;
+    /* Espace au-dessus des filtres */
     margin-bottom: 20px;
 }
 
@@ -141,28 +153,27 @@ label {
 }
 
 .filter-btn.selected {
-    background-color: transparent; /* Retire le fond bleu permanent */
-    border-color: #d3d3d3; /* Bordure grise par défaut */
+    background-color: transparent;
+    /* Retire le fond bleu permanent */
+    border-color: #d3d3d3;
+    /* Bordure grise par défaut */
 }
-
-
-
-
-
-
 
 
 form .destination-text {
     border-left: none;
     border-right: none;
-    border-top: 1px; color: #F2F2F2;
-    border-bottom: 1px; color: #F2F2F2;
-    font-family: 'raleway',sans-serif;
+    border-top: 1px;
+    color: #F2F2F2;
+    border-bottom: 1px;
+    color: #F2F2F2;
+    font-family: 'raleway', sans-serif;
     font-size: 18px;
     font-weight: 700;
-    
+
 
 }
+
 input::placeholder {
     color: black;
 }
@@ -170,7 +181,8 @@ input::placeholder {
 form button {
     width: auto;
     height: 49px;
-    padding: 15px 16px; /* haut/bas gauche/droite */
+    padding: 15px 16px;
+    /* haut/bas gauche/droite */
     gap: 10px;
     background-color: #0065FC;
     border: 1px solid #0065FC;
@@ -182,6 +194,8 @@ form button {
     text-align: center;
     color: #ffffff;
 }
+
+/****************** CARDS *******************/
 
 .section-title {
     margin: 0;
@@ -204,7 +218,7 @@ form button {
 }
 
 .euro {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .neutral-star {
@@ -221,17 +235,59 @@ form button {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
+    height: calc(100% - 120px);
+    box-sizing: content-box;
 }
 
 /****** Hebergements ***********/
+
+/*c*/
 .hebergements {
-    width: 65%;
+    width: 60%;
 }
+
+/*c*/
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*je ne comprends pas la difference entre cards et a*/
+.hebergements-cards a {
+    width: 30%;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.hebergements-cards .card {
+    margin-top: 25px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    min-height: 50px;
+    max-height: 100px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.hebergements .card-content {
+    margin-top: -20px;
+    padding: 10px;
+}
+
+.hebergements .card-rating {
+    margin-top: -10px;
+}
+
 
 /****** Populaires ***********/
 .populaires {
-    width: 32%;
+    width: 30%;
 }
 
 .populaires-title {
