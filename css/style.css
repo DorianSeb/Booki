@@ -9,6 +9,10 @@
     --filter-bg-color: #DEEBFF;
 }
 
+body {
+    max-width: 1440px; /* Largeur max */
+}
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -82,12 +86,10 @@ label {
     min-width: 50px;
     /* Obligé de mettre une valeur min, sinon c'est tout petit. Mais je crains pour le côté responsive */
     height: 100%;
-    border: 1px solid #ffffff;
     border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 /***** couleur logo *****/
@@ -229,6 +231,7 @@ form button {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    padding-top: 30px;
 }
 
 .hebergements-and-populaires section {
@@ -256,8 +259,9 @@ form button {
 /*je ne comprends pas la difference entre cards et a*/
 .hebergements-cards a {
     width: 30%;
-    margin-bottom: 50px;
-    padding: 10px;
+    margin-bottom: 27.5px; /**La hauteur a une difference de 0,5***/
+    padding: 0px;
+
 }
 
 .hebergements-cards .card {
@@ -272,7 +276,6 @@ form button {
     min-height: 50px;
     max-height: 100px;
     border-radius: 20px 20px 0 0;
-    object-fit: cover;
 }
 
 .hebergements .card-content {
@@ -299,7 +302,8 @@ form button {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
-}
+    justify-content: space-between;
+} 
 
 .populaires-cards img {
     width: 33%;
@@ -329,10 +333,54 @@ form button {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+ /******************** ACTIVITES ******************/
 
+ .activites {
+    margin-top: 40px
+}
 
+.activites-cards {
+    display: grid; /* Création d'une grille pour les card */
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Colonnes adaptatives */
+    gap: 20px; /* Espace uniforme entre les cartes */
+    margin: 0 auto; /* Centre le contenu */
+}
 
+.card {
+    overflow: hidden;
+}
 
+.activites img {
+    width: 100%;
+    min-height: 400px;
+    max-height: 400px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Effet au survol */
+.card:hover {
+    transform: scale(1.05); /* Légère augmentation de taille */
+}
+footer {
+    background-color: var(--main-bg-color);
+    margin: 100px -50px;
+    padding: 10px;
+    display: flex;
+}
+
+footer .column {
+    width: 30%;
+}
+
+footer .column ul {
+    padding: 0px;
+    list-style-type: none;
+}
+footer .column ul li a {
+    color: black;
+    text-decoration: none;
+    line-height: 33px;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
