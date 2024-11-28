@@ -72,12 +72,14 @@ nav a:hover {
 /********************* FORMULAIRE/RECHERCHE *********************/
 
 form {
-    width: 377px;
+    width: 320px;
     height: 50px;
     display: flex;
     align-items: center;
-    gap: 24px;
-    border-top: 5px black;
+    border-top: solid 1px #F2F2F2 !important;
+    border-bottom: solid 1px #F2F2F2 !important;
+    border-radius: 15px;
+   
 }
 
 /***** Background logo *****/
@@ -101,8 +103,41 @@ label {
     color: black !important;
     /* Change la couleur du texte tapé en noir */
     font-size: 16px;
+    padding-left: 20px;
 }
 
+form button {
+    width: auto;
+    height: 51px;
+    padding: 15px 16px;
+    /* haut/bas gauche/droite */
+    gap: 10px;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0 15px 15px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+.search-button .fa-solid.fa-magnifying-glass {
+    display: none;
+  }
+  form .destination-text {
+    border-left: none;
+    border-right: none;
+    border-top: 1px;
+    color: #F2F2F2;
+    border-bottom: 1px;
+    color: #F2F2F2;
+    font-family: 'raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+input::placeholder {
+    color: black;
+}
 /******************** FILTRES ********************/
 
 /***** Style global******/
@@ -160,43 +195,6 @@ label {
     border-color: #d3d3d3;
     /* Bordure grise par défaut */
 }
-
-
-form .destination-text {
-    border-left: none;
-    border-right: none;
-    border-top: 1px;
-    color: #F2F2F2;
-    border-bottom: 1px;
-    color: #F2F2F2;
-    font-family: 'raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-
-
-}
-
-input::placeholder {
-    color: black;
-}
-
-form button {
-    width: auto;
-    height: 49px;
-    padding: 15px 16px;
-    /* haut/bas gauche/droite */
-    gap: 10px;
-    background-color: #0065FC;
-    border: 1px solid #0065FC;
-    border-radius: 0 15px 15px 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21.13px;
-    text-align: center;
-    color: #ffffff;
-}
-
 /****************** CARDS *******************/
 
 .section-title {
@@ -388,6 +386,7 @@ footer .column ul li a {
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
+        margin-right: 50px;
     }
 
     .hebergements {
@@ -416,9 +415,118 @@ footer .column ul li a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .activites {
+        justify-content: center;
+    }
+    .activites-cards {
+        grid-template-columns: repeat(4, minmax(29px, 1fr));
+    }
+    .activites img {
+        max-height: 200px;
+        min-height: 200px;
+    }
+    article .card {
+        max-height: 265.5px;
+    }
+
+    .card-title {
+    display: flex;
+    align-items: center;
+    height: 19.5px;
+}
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
-}
+@media (max-width: 768px) {
+   body {
+    margin: 0px;
+   }
+   .main-container {
+    margin: 0px;
+    padding: 0 20px;
+    
+   }
+    header {
+        flex-direction: column; /* j'ai vu que quelauun avait fait block je ne sais pas si c'est bien ?*/
+    }
+    .logo {
+        margin: auto; /* ici je ne comprends pas pourquoi c'est la seule solution pour centrer. j'ai vraiment trouvé par hasard. Pourquoi on utilises pas un center ? */ 
+    }
+    nav a:hover {
+        color:#0065FC;
+        border-bottom: solid #0065FC 10px; /* ne s'affiche pas je ne comprends pas*/
+        padding-bottom: 22px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+    nav ul li {
+        width: 50%;
+        gap: 0px;
+        text-align: center;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 19px;
+        weight: 335px;
+    }
+    .form button {
+        border-radius: 15px;
+    }
+    p {
+        font-size: 16px;
+    }
+    #destination {
+        font-size: 15px;
+        }
+    button {
+        justify-content: center; /* Centre le contenu (icône) */
+        gap: 0; /* Supprime l'espace pour l'icône seule */
+    }
+    .form button span {
+        display: none;
+    }
+    .search-button .fa-solid.fa-magnifying-glass {
+        display: inline;
+        color: white;
+      }
+    .search-button i {
+        margin: 0; /* Ajuste les marges autour de l'icône */
+    }
+    .search-bar .form button .fa-search {
+        display: block;
+    }
+    .filters-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .filter-buttons .filter-btn {
+        width: 45%;
+        font-size: 14px;
+    }
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+    .populaires-cards {
+        flex-direction: column;
+    }
+    .populaires-cards a {
+        width: 100%;
+    }
+    
+
+    
+
+}   
