@@ -443,14 +443,15 @@ footer .column ul li a {
    }
    .main-container {
     margin: 0px;
-    padding: 0 20px;
-    
+    padding: 0px;
    }
     header {
         flex-direction: column; /* j'ai vu que quelauun avait fait block je ne sais pas si c'est bien ?*/
+        padding-left: 20px;
     }
     .logo {
         margin: auto; /* ici je ne comprends pas pourquoi c'est la seule solution pour centrer. j'ai vraiment trouvé par hasard. Pourquoi on utilises pas un center ? */ 
+        padding-left: 20px;
     }
     nav a:hover {
         color:#0065FC;
@@ -460,11 +461,13 @@ footer .column ul li a {
     nav {
         flex-direction: column;
         align-items: center;
+        padding-left: 20px;
     }
     nav ul {
         display: flex;
         justify-content: center;
         padding: 0px;
+        padding-left: 20px;
     }
     nav ul li {
         width: 50%;
@@ -474,13 +477,18 @@ footer .column ul li a {
     }
     h1 {
         font-size: 19px;
-        weight: 335px;
+        width: 335px;
+        padding-left: 20px;
     }
     .form button {
         border-radius: 15px;
     }
     p {
         font-size: 16px;
+        padding-left: 20px;
+    }
+    form {
+        padding-left: 20px;
     }
     #destination {
         font-size: 15px;
@@ -488,6 +496,7 @@ footer .column ul li a {
     button {
         justify-content: center; /* Centre le contenu (icône) */
         gap: 0; /* Supprime l'espace pour l'icône seule */
+        
     }
     .form button span {
         display: none;
@@ -506,6 +515,7 @@ footer .column ul li a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 20px
     }
     .filter-buttons {
         display: flex;
@@ -516,8 +526,17 @@ footer .column ul li a {
         width: 45%;
         font-size: 14px;
     }
+    .logement-info {
+        padding-left: 20px;
+    }
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+        gap: 20px;
+        width: 100%;
+        padding: 0px;
+    }
+    .hebergements-and-populaires section {
+        border-radius: 0px;
     }
     .populaires-cards {
         flex-direction: column;
@@ -525,8 +544,36 @@ footer .column ul li a {
     .populaires-cards a {
         width: 100%;
     }
-    
-
-    
-
+    .hebergements {
+        background-color: white !important;
+    }
+    .hebergements-cards {
+        flex-direction: column;
+    }
+    .hebergements-cards a {
+        width: 100%;
+    }
+    .card-subtitle {
+        padding-left: 0px;
+    }
+    .activites-title {
+        padding-left: 20px
+    }
+    .activites-cards {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        width: 100%;
+    }
+   .activites {
+        padding-left: 20px
+   }
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 50px;
+        padding-left: 40px;
+        width: 100%;
+    }
 }   
